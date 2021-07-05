@@ -1,0 +1,7 @@
+services:
+  py-docker-api:
+    build: .
+    command: python3 main.py
+    volumes:
+      - .:/usr/src/app
+      - /var/run/docker.sock:/var/run/docker.sock
